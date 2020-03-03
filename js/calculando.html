@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculando</title>
+</head>
+<style>
+    input#txtn1{
+        background: lawngreen;
+        width: 50px;
+    }
+    input#txtn2{
+        background: lightskyblue;
+        width: 50px;
+    }
+    div#res{
+        background-color: red;
+    }
+</style>
+<body>
+    <h1>Claculando</h1>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2"> 
+    <div>Escolha o sinal</div>
+    <<input type="button" value="+" onclick="Somar()">>
+    <<input type="button" value="-" onclick="Subtrair()">>
+    <<input type="button" value="*" onclick="Multiplicar()">>
+    <<input type="button" value="/" onclick="Dividir()">>
+    <div>Resultado</div>
+    <div id="res"></div>
+    <script>
+        function Somar(){
+            var tn1=document.querySelector('input#txtn1')
+            var tn2=document.querySelector('input#txtn2')
+            var res=document.querySelector('div#res')
+            var n1=Number(tn1.value)
+            var n2=Number(tn2.value)
+            var rs= n1+n2
+            res.innerHTML=`=${rs}`
+        }
+        function Subtrair(){
+            var tn1=document.querySelector('input#txtn1')
+            var tn2=document.querySelector('input#txtn2')
+            var res=document.querySelector('div#res')
+            var n1=Number(tn1.value)
+            var n2=Number(tn2.value)
+            var rs= n1-n2
+            res.innerHTML=`=${rs}`
+        }
+        function Multiplicar(){
+            var tn1=document.querySelector('input#txtn1')
+            var tn2=document.querySelector('input#txtn2')
+            var res=document.querySelector('div#res')
+            var n1=Number(tn1.value)
+            var n2=Number(tn2.value)
+            var rs= n1*n2
+            res.innerHTML=`=${rs}`
+        }
+        function Dividir(){
+            var tn1=document.querySelector('input#txtn1')
+            var tn2=document.querySelector('input#txtn2')
+            var res=document.querySelector('div#res')
+            var n1=Number(tn1.value)
+            var n2=Number(tn2.value)
+            var rs= n1/n2
+            res.innerHTML=`=${rs}`
+        }
+        
+    </script>
+
+</body>
+</html>

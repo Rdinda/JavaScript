@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pais</title>
+</head>
+<body>
+    <h1>Verificando Pais</h1>
+    <input type="text" name="pz" id="pz">
+    <input type="button" value="verificar" onclick="vel()">
+    <div id="vr"></div> 
+    <script>
+        function vel(){
+            var p=window.document.querySelector('input#pz')
+            var v=window.document.querySelector('div#vr')
+            if(p == 'brasil'){
+                v.innerHTML=`${}Muito bom`
+            } else{
+                v.innerHTML=`${} Que pena voce é estrangeiro`
+            }
+        }
+    </script>
+</body>
+</html>
