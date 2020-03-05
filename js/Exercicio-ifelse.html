@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="atualizarDataHora()">
+    <h1>Aplicando as condiçoes if else.</h1>
+    <input type="number" name="txt" id="nun">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"></div>
+
+    <input type="text" name="txt2" id="txt2">
+    <input type="button" value="    Dia   " onclick="dia()">
+    <output id="res2">rt</output>
+    
+    <script>
+        function verificar(){
+        var nu=document.querySelector('input#nun').value
+        var res=document.querySelector('div#res')
+        if(nu<12){
+            res.innerHTML=`São ${nu}hrs`
+            res.innerHTML+=`<p>Ola que prazer, Muito bom dia.</p>`
+        }else if(nu<=18){
+            res.innerHTML=`São ${nu}hrs`
+            res.innerHTML+=`<p>Muito bom. Boa tarde.</p>`
+        }else{
+            res.innerHTML=`São ${nu}hrs`
+            res.innerHTML+=`<p>Nossa ja ta tarde. Boa noite</P`
+        }
+        }
+
+        function dia(){
+            var agora= new Date()
+            var di=agora.getDay()
+            var res2=document.querySelector('div#res2')
+            res2.innerHTML=`${di}`
+         
+        }
+    </script>
+
+</body>
+</html>
