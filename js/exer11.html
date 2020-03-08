@@ -11,6 +11,7 @@
     <input type="button" value="Verificar" onclick="vrf()">
     <div id="res"></div>
     <script>
+        var d= new Date();
         function vrf(){
             var text=document.querySelector('input#txt').value;
             var res=document.querySelector('div#res')
@@ -21,6 +22,7 @@
             } else{
                 res.innerHTML=`${text}.`
                 res.innerHTML+=`<p>Nossa que pena nao somos do mesmo pais</p>`
+                res.innerHTML+= d
             }
 
         }
